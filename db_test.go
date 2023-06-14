@@ -34,5 +34,16 @@ func TestDatabase_Get(t *testing.T) {
 
 func TestDatabase_Set(t *testing.T) {
 	d := asinodb.New()
-	d.Set("key", "value")
+
+	err := d.Set("key", "value")
+
+	if err != nil {
+		t.Fatalf("unexpected error: %v", err)
+	}
+
+	v, _ := d.Get("key")
+
+	if value, ok := v.(string); !ok || value != "value" {
+		t.Fatalf("unexpected value: %v", v)
+	}
 }
