@@ -1,1 +1,12 @@
-/.idea
+
+.DS_Store
+*.swp
+*~
+
+# Project files
+.idea/
+.vscode/
+
+
+# Vendor dependency
+vendor/
