@@ -10,3 +10,4 @@
 
 # Vendor dependency
 vendor/
+/server
